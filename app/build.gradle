@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    namespace 'app.hack.eightballpool'
     compileSdkVersion 36
 
     defaultConfig {
