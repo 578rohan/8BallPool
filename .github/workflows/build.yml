@@ -19,10 +19,12 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
-    - name: Setup Gradle
+    - name: Setup Compatible Gradle 6.9.4
       uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: '6.9.4'
 
-    - name: Build with Gradle
+    - name: Build Debug APK
       run: gradle assembleDebug --stacktrace
 
     - name: Upload APK
